@@ -17,7 +17,7 @@ router.get("/api/webhookcallback", (req, res) => {
       mode &&
       token &&
       mode === "subscribe" &&
-      process.env.Meta_WA_VerifyToken === token
+      Meta_WA_VerifyToken === token
     ) {
       return res.status(200).send(challenge);
     } else {
